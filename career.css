@@ -1,0 +1,208 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f7f7fb;
+color:#333;
+}
+
+/* Navbar container */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    background: #e5daec;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Left part (logo) */
+.nav-left img.logo {
+    width: 60px;  /* adjust size */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navigation links */
+nav ul.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+/* Links style */
+nav a{
+    text-decoration: none;
+    color: #8508ce;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+nav a:hover{
+    background: #6a19ac;
+    color: #f7f7fb;
+}
+
+
+/* ---------------------------- */
+/* MAIN CONTENT CONTAINER */
+/* ---------------------------- */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* ---------------------------- */
+/* TEXT CONTENT */
+/* ---------------------------- */
+.text {
+    max-width: 720px;
+    text-align: justify;
+    
+}
+
+.text h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #8508ce;
+    font-weight: 700;
+}
+
+.text h1 .highlight {
+    color: #a100ff;
+    font-weight: 800;
+}
+
+.text p {
+    margin-bottom: 10px;
+}
+
+.text ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.text ul li {
+    margin-bottom: 8px;
+}
+
+/* ---------------------------- */
+/* IMAGE CARD */
+/* ---------------------------- */
+.image-card {
+    flex-shrink: 0;
+    width: 400px;
+    height: 400px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    margin-top: 10vh;
+    margin-right: 5vw;
+    background-color: #12004c;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #12004c;
+}
+
+/* Hover effect */
+.image-card:hover {
+    transform: scale(1.08) translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+/* ---------------------------- */
+/* RESPONSIVE DESIGN */
+/* ---------------------------- */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+        align-items: center; /* Center all content */
+        text-align: center;  /* Center text for smaller screens */
+    }
+
+    .image-card {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .text h1 {
+        font-size: 24px;
+    }
+
+    .image-card {
+        width: 100%;
+        height: auto;
+    }
+}
+/* ---------------------------- */
+/* COLORS */
+/* ---------------------------- */
+.highlight {
+    color: #a100ff;
+    font-weight: bold;
+}
+
+/* ---------------------------- */
+/* RESPONSIVE DESIGN */
+/* ---------------------------- */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .image-card {
+        margin: 0 auto;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .text h1 {
+        font-size: 24px;
+    }
+
+    .image-card {
+        width: 100%;
+        height: auto;
+    }
+}
